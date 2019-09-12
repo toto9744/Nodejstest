@@ -7,19 +7,26 @@
 </head>
 <body>
     <h1>Vue s'affiche</h1>
-   <p><%=test%></p> 
-    <form action="/" method="POST">
+    
+
+    <!-- <%if(locals.error) {%>
+
+<%=error%>
+
+    <% } %> -->
+
+
+    <form action="/add" method="POST">
         <label>Titre</label>
-        <input type="text" id="name" name="name">
+        <input type="text"  name="titres"></br>
         <label>Description</label>
-        <input type="text" id="name" name="name">
+        <input type="text"  name="date">
         <button type="submit">Ok</button>
         
 
 
 
     </form>
-
 
 
 </body>
