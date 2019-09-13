@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Page Title</title>
+  
+</head>
+<body>
+    <h1>Vue s'affiche</h1>
+    
+
+    <%if(locals.error) {%>
+
+<%=error%>
+
+    <% } %>
+
+    <table>
+      <thead>
+        <tr>
+          <td>n°</td>
+          <td>Titre</td>
+          <td>Date parution</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (data) { %>
+        <% for(var i = 0; i < data.length; i++) { %>
+        <tr>
+          <td><%= (i + 1) %></td>
+          <td><%= data[i].titre %></td>
+          <td><%= data[i].date_parution %></td>
+        </tr>
+        <% } %>
+        <% } %>
+      </tbody>
+    </table>
+    <form action="livre/add" method="POST">
+        <label>Titre</label>
+        <input type="text"  name="titre"></br>
+        <label>Description</label>
+        <input type="text"  name="date_parution">
+        <button type="submit">Ok</button>
+        
+
+
+
+    </form>
+
+
+</body>
+</html>
